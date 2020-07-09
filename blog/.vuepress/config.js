@@ -11,5 +11,6 @@ module.exports = {
             clientId: 'f549469e9f76d7c8a7bd',
             clientSecret: 'a19a3d333e6b0996ed6dbf80ac5c9d6f61d0db35',
         },
-    }
+    },
+    pwa: true
 }
