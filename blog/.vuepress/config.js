@@ -4,6 +4,37 @@ module.exports = {
     base: '/chJouBlog/',
     theme: '@vuepress/blog',
     themeConfig: {
+        nav: [
+            {
+                text: 'Blog',
+                link: '/',
+            },
+            {
+                text: 'Tags',
+                link: '/tag/',
+            },
+            {
+                text: 'Author',
+                link: '/author',
+            },
+            {
+                text: 'GitHub',
+                link: 'https://github.com/xwei111/chJouBlog',
+            },
+            {
+                text: 'XW-UI',
+                link: 'https://xwei111.github.io',
+            },
+        ],
+        footer: {
+            contact: [
+                { type: 'github', link: 'https://github.com/xwei111/chJouBlog' },
+                { type: 'mail', link: 'mailto:17681828640@163.com' },
+            ],
+            copyright: [
+                { text: '追旅 © 2020', link: '' }
+            ]
+        },
         comment: {
             service: 'vssue',
             owner: 'xwei111', // github用户名
