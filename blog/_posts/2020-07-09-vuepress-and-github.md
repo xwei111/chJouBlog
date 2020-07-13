@@ -303,6 +303,8 @@ location: 杭州滨江 (位置)
 
 ### 评论
 
+做这个功能前请保证你的网络，github伤不起！！！
+
 如果你想各位看官们能够和你探讨问题，评论功能就必不可少了。我们先来看看评论功能长什么样子吧。
 
 ![An image](../.vuepress/public/vuepressAndgithub/20200709vuepressandgithub-6.png)
