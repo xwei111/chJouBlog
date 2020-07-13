@@ -299,7 +299,7 @@ location: 杭州滨江 (位置)
 
 ![An image](../.vuepress/public/vuepressAndgithub/20200709vuepressandgithub-5.png)
 
-当然你也可以选择手动配置分页、标签、页脚和头部导航等，这里就不一一赘述了。
+当然你也可以选择手动配置分页、标签、页脚和头部导航等，这里就不一一赘述了
 
 ### 评论
 
