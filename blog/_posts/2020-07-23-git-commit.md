@@ -9,13 +9,13 @@ location: 杭州滨江
 
 ## 前言
 
-日常工作多人协作项目非常常见，多人协作也就意味着我们需要一定的规范，众所周知eslint、tslint、stylelint、prettier等工具来帮助团队统一代码层面规范，同时提交代码也需要有一定的规范，这也是前端工程化进程中不可或缺的
+日常工作多人协作项目非常常见，多人协作也就意味着需要一定的规范，众所周知eslint、tslint、stylelint、prettier等工具来帮助团队统一代码层面规范，同时提交代码也需要规范，这也是前端工程化进程中不可或缺的
 
-下图是element的日常commit，可以看到commit的格式为key: value 形式的，key是功能模块，value则是对具体改动的描述，这样是不是能够比较清晰的描述每次commit
+下图是element的日常commit，可以看到commit的格式为key: value 形式的，key是功能模块，value则是对具体改动的描述，这样是不是能够比较清晰的描述commit
 
 ![An image](../.vuepress/public/gitcommit/20200723gitcommit-1.png)
 
-好的commit规范可以提供清晰的改动模块、信息、日志，目前业界比较认可[Angular规范](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)的，我们先来间了解一下
+好的commit规范可以提供清晰的改动模块、信息、日志，目前业界比较认可[Angular规范](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)，我们先来间了解一下
 
 ## 规范
 
@@ -68,11 +68,11 @@ npm install Commitizen -g
 commitizen init cz-conventional-changelog --save --save-exact
 ```
 
-安装完毕之后，我们之后git commit操作就要用git cz来代替，当然你可以继续使用git commit，至于如何避免git commit提交的信息不规范我们稍后再讨论，先来看一下git cz命令，如下：
+安装完毕之后，git commit操作就要用git cz来代替，当然你可以继续使用git commit，至于如何避免git commit提交的信息不规范我们稍后再讨论，先来看一下git cz命令，如下：
 
 ![An image](../.vuepress/public/gitcommit/20200723gitcommit-2.png)
 
-这一步标识让我们选择我们此次commit的类型，我们选择相应类型回车即可，之后会有如下各步骤：
+这一步是让选择此次commit的类型，选择相应类型回车即可，之后会有如下步骤：
 
 ```
 # 填写此次的改动影响范围，继续
@@ -133,9 +133,9 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitl
 
 ### husky
 
-如何触发校验呢？？？这里我们需要了解一下```Git hooks```，```Git Hooks``` 就是那些在Git执行特定事件（如commit、push等）后执行前触发运行的脚本，当我们执行```git init```操作时.git/hooks目录下回默认生成一些挂钩，.sample 拓展名防止它们默认被执行。我们提交代码时的eslint、stylelint检验其实也是这个道理。
+如何触发校验呢？？？这里需要了解一下```Git hooks```，```Git Hooks``` 就是那些在Git执行特定事件（如commit、push等）后触发运行的脚本，当我们```git init```操作时.git/hooks目录下回默认生成一些挂钩，.sample 拓展名防止它们默认被执行。提交代码时的eslint、stylelint检验其实也是这个道理。
 
-在这里我们使用[husky](https://www.npmjs.com/package/husky)来帮助我们完成校验工作，[husky](https://www.npmjs.com/package/husky)安装的过程中会在.git/hooks目录中生成一些我们需要的钩子。
+在这里使用[husky](https://www.npmjs.com/package/husky)来帮助我们完成校验工作，[husky](https://www.npmjs.com/package/husky)安装的过程中会在.git/hooks目录中生成一些我们需要的钩子。
 
 安装
 
@@ -174,7 +174,7 @@ husky > commit-msg hook failed (add --no-verify to bypass)
 
 ```
 
-我们发现现在不按着规范来已经不能正常commit代码了，如果你执意要用commit的话，按照规范提交代码就能够通过，不过还是建议大家选择```git cz```
+现在不按着规范来已经不能正常commit代码了，按照规范提交代码就能够通过，如下
 
 ```
 $ git commit -m 'fix:  修复了一万个bug'
@@ -187,11 +187,13 @@ husky > commit-msg (node v10.16.0)
  create mode 100644 package.json
 ```
 
+现在使用git commit已经变得很麻烦了，所有我们以后都用git cz来代替git commit
+
 ## 日志及版本
 
-上文提到了好的commit规范还能够为我们提供不错的日志，[conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)，就可以便可以给我们提供日志，但是我们有更好的选择：[standard-version](https://www.npmjs.com/package/standard-version)
+上文提到了好的commit规范还能够提供不错的日志，[conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)，便可以给我们提供日志，但是我们有更好的选择：[standard-version](https://www.npmjs.com/package/standard-version)
 
-[standard-version](https://www.npmjs.com/package/standard-version)除了帮助我们生产日志外，还可以协助我们控制项目版本及为git打tag
+[standard-version](https://www.npmjs.com/package/standard-version)除了帮助我们生成日志外，还可以协助我们控制项目版本及打tag
 
 全局安装
 ```
@@ -218,7 +220,7 @@ npm|cnpm install standard-version -g
 * release:001: 执行该脚本, 那么如果当前版本是 1.0.0 那么版本将被提升至 1.0.1
 
 
-执行上述命令时，会打上版本tag和日志，日志存放于```CHANGELOG.md```中，具体如下
+执行上述命令时，会有三个动作：生成版本、打tag、生成日志，日志存放于```CHANGELOG.md```中，具体效果如下
 
 ```
 $ git tag
