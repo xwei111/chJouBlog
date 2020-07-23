@@ -230,7 +230,7 @@ v2.0.0
 ![An image](../.vuepress/public/gitcommit/20200723gitcommit-4.png)
 
 
-日志实际效果见[追旅博客日志](/log)
+日志实际效果见[追旅博客日志](/chJouBlog/log)
 
 
 ## 结语
