@@ -18,6 +18,10 @@ module.exports = {
                 link: '/author',
             },
             {
+                text: 'Log',
+                link: '/log',
+            },
+            {
                 text: 'GitHub',
                 link: 'https://github.com/xwei111/chJouBlog',
             },

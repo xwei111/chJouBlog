@@ -7,7 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run dev",
     "dev": "vuepress dev blog",
-    "build": "vuepress build blog"
+    "build": "vuepress build blog",
+    "release": "standard-version --release-as",
+    "release:100": "npm run release -- major",
+    "release:010": "npm run release -- minor",
+    "release:001": "npm run release -- patch",
+    "cp": "cp-cli CHANGELOG.md blog/log.md"
   },
   "author": "追旅",
   "license": "ISC",
@@ -16,6 +21,7 @@
     "@commitlint/config-conventional": "^9.1.1",
     "@vuepress/theme-blog": "^2.2.0",
     "commitizen": "^4.1.2",
+    "cp-cli": "^2.0.0",
     "cz-conventional-changelog": "^3.2.0",
     "husky": "^4.2.5",
     "vuepress": "^1.5.2"
