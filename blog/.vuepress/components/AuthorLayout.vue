@@ -1,5 +1,5 @@
 <template>
-  <div class="test">
+  <div class="auth_content">
     <Content />
   </div>
 </template>
@@ -8,7 +8,7 @@
 export default {};
 </script>
 <style scoped>
-.test {
+.auth_content {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.07);
   font-size: 16px;
   letter-spacing: 0px;

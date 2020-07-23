@@ -25,6 +25,10 @@ module.exports = {
                 text: 'XW-UI',
                 link: 'https://xwei111.github.io',
             },
+            {
+                text: 'Ludd',
+                link: 'https://ludd.link'
+            }
         ],
         footer: {
             contact: [
@@ -44,5 +48,8 @@ module.exports = {
         },
         summaryLength: 70
     },
-    pwa: true
+    pwa: true,
+    // newsletter: {
+    //     endpoint: 'https://github.us10.list-manage.com/subscribe/post?u=bf88904cb8a358c3e45f6447d&amp;id=1cbc511b09'
+    // }
 }
