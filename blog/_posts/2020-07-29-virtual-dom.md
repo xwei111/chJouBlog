@@ -345,6 +345,10 @@ function applyPatch(node, currentPatches) {
 
 到此，已经粗略的了解了虚拟DOM
 
+## 结语
+
+充实自我，加油 ！！！
+
 [完整代码](https://github.com/xwei111/virtual-dom-demo)
 
 [演示地址](https://chasejourney.top/virtual-dom-demo/)
