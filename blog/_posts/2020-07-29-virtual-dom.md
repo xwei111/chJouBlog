@@ -117,7 +117,7 @@ class Element {
 }
 ```
 
-在index.html调用改方法
+在index.html调用该方法
 
 ```js
 const app = data.render()
@@ -341,6 +341,49 @@ function applyPatch(node, currentPatches) {
         }
     })
 }
+```
+
+在index.html引入patch.js，最终index.html如下
+
+```html
+<!doctype html>
+<html>
+<head>
+    <title>Virtual Dom</title>
+</head>
+<script src="./listdiff2.js"></script>
+<script src='./consts.js'></script>
+<script src="./element.js"></script>
+<script src='./diff.js'></script>
+<script src='./patch.js'></script>
+<body>
+    <button id="patch">Patch</button>
+</body>
+<script>
+    const oldData = createElement('ul', { key: 'ul' }, [
+        createElement('li', { key: 1 }, ['aaa']),
+        createElement('li', { key: 2 }, ['bbb']),
+        createElement('li', { key: 3 }, ['ccc'])
+    ])
+    let newData = createElement('ul', { key: 'ul' }, [
+        createElement('li', { key: 1 }, ['aaa']),
+        createElement('li', { key: 4 }, ['aaa']),
+        createElement('li', { key: 2 }, ['bbb']),
+        createElement('li', { key: 3 }, ['ccc'])
+    ])
+    const app = oldData.render()
+    document.body.appendChild(app)
+    const patchel = document.getElementById('patch')
+    patchel.addEventListener('click', () => {
+        if (!newData) return
+        const patches = diff(oldData, newData)
+        patch(app, patches)
+        newData = null
+    })
+
+</script>
+
+</html>
 ```
 
 到此，已经粗略的了解了虚拟DOM
