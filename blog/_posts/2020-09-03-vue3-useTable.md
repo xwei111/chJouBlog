@@ -196,7 +196,17 @@ interface response_type {
 }
 
 function useTable<P>(
-	request: (params?: Partial<P>) => Promise<response_type> | Array<{ [key: string]: any }>,
+	request: Array<{ [key: string]: any }>,
+	defaultParams?: Partial<P>
+): { [key: string]: any }
+
+function useTable<P>(
+	request: (params?: Partial<P>) => Promise<response_type>,
+	defaultParams?: Partial<P>
+): { [key: string]: any }
+
+function useTable<P>(
+	request: ((params?: Partial<P>) => Promise<response_type>) | Array<{ [key: string]: any }>,
 	defaultParams?: Partial<P>
 ): { [key: string]: any } {
 
@@ -204,12 +214,12 @@ function useTable<P>(
 	const pageSize = ref<number>(10);
 
 	const state = reactive<{ [key: string]: any }>({
-		params: Object.assign({ current, pageSize }, defaultParams),
+		params: Object.assign({ currentPage: current, pageSize: pageSize }, defaultParams),
 		searchInfo: {},
 		dataSorce: [],
 		pagination: {
-			current,
-			pageSize,
+			current: current,
+			pageSize: pageSize,
 			total: 0,
 			onChange: (page: number, pageSize: number): void => pageChange(page, pageSize),
 			onShowSizeChange: (current: number, size: number): void => showSizeChange(current, size)
@@ -222,7 +232,7 @@ function useTable<P>(
 			state.pagination.total = request.length
 		}
 		if (Object.prototype.toString.call(request) == "[object Function]") {
-			request && (request({ ...state.params, ...params }) as Promise<any>).then((res: any) => {
+			(request as Function)({ ...state.params, ...params }).then((res: any) => {
 				if (res.success) {
 					const { data: { totalItem, list } } = res
 					state.pagination.total = totalItem
@@ -241,13 +251,11 @@ function useTable<P>(
 
 	const pageChange = (page: number, pageSize: number) => {
 		current.value = page;
-		// 带上搜索条件
 		_request(state.searchInfo)
 	}
 
 	const showSizeChange = (current: number, size: number) => {
 		pageSize.value = current;
-		// 带上搜索条件
 		_request(state.searchInfo)
 	}
 
@@ -257,7 +265,7 @@ function useTable<P>(
 		pageSize.value = 10;
 		_request({})
 	}
-	// 初始化table
+
 	_request(state.params)
 
 	return {
