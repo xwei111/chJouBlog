@@ -235,7 +235,7 @@ function useTable<P>(
 			(request as Function)({ ...state.params, ...params }).then((res: any) => {
 				if (res.success) {
 					const { data: { totalItem, list } } = res
-					state.pagination.total = totalItem
+					state.pagination.total = totalItem ? totalItem : list.length
 					state.dataSorce = list
 				}
 			})
@@ -251,11 +251,13 @@ function useTable<P>(
 
 	const pageChange = (page: number, pageSize: number) => {
 		current.value = page;
+		state.searchInfo.currentPage = page
 		_request(state.searchInfo)
 	}
 
 	const showSizeChange = (current: number, size: number) => {
 		pageSize.value = current;
+		state.searchInfo.pageSize = current
 		_request(state.searchInfo)
 	}
 
