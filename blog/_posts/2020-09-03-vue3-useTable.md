@@ -242,9 +242,15 @@ function useTable<P>(
 		}
 	}
 
-	const searchHandle = (searchInfo: Partial<P>) => {
+	const searchHandle = (searchInfo: any) => {
 		current.value = 1;
 		pageSize.value = 10;
+		if(searchInfo.currentPage) {
+			state.pagination.current = searchInfo.currentPage
+		}
+		if(searchInfo.pageSize) {
+			state.pagination.pageSize = searchInfo.pageSize
+		}
 		state.searchInfo = searchInfo;
 		_request(searchInfo)
 	}
