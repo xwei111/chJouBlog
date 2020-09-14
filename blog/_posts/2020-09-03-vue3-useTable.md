@@ -210,8 +210,11 @@ function useTable<P>(
 	defaultParams?: Partial<P>
 ): { [key: string]: any } {
 
-	const current = ref<number>(1);
-	const pageSize = ref<number>(10);
+	const c = defaultParams && (defaultParams as any).current ? (defaultParams as any).current : 1;
+	const p = defaultParams && (defaultParams as any).pageSize ? (defaultParams as any).pageSize : 10;
+
+	const current = ref<number>(c);
+	const pageSize = ref<number>(p);
 
 	const state = reactive<{ [key: string]: any }>({
 		params: Object.assign({ currentPage: current, pageSize: pageSize }, defaultParams),
