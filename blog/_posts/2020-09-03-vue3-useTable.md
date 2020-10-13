@@ -196,22 +196,12 @@ interface response_type {
 }
 
 function useTable<P>(
-	request: Array<{ [key: string]: any }>,
-	defaultParams?: Partial<P>
-): { [key: string]: any }
-
-function useTable<P>(
-	request: (params?: Partial<P>) => Promise<response_type>,
-	defaultParams?: Partial<P>
-): { [key: string]: any }
-
-function useTable<P>(
 	request: ((params?: Partial<P>) => Promise<response_type>) | Array<{ [key: string]: any }>,
-	defaultParams?: Partial<P>
+	defaultParams?: { [key: string]: any }
 ): { [key: string]: any } {
 
-	const c = defaultParams && (defaultParams as any).current ? (defaultParams as any).current : 1;
-	const p = defaultParams && (defaultParams as any).pageSize ? (defaultParams as any).pageSize : 10;
+	const c = defaultParams?.current ?? 1;
+	const p = defaultParams?.pageSize ?? 10;
 
 	const current = ref<number>(c);
 	const pageSize = ref<number>(p);
@@ -236,8 +226,8 @@ function useTable<P>(
 		}
 		if (Object.prototype.toString.call(request) == "[object Function]") {
 			(request as Function)({ ...state.params, ...params }).then((res: any) => {
-				if (res.success) {
-					const { data: { totalItem, list } } = res
+				if (res?.success) {
+					const { data: { totalItem, list } } = res ?? {}
 					state.pagination.total = totalItem ? totalItem : list.length
 					state.dataSorce = list
 				}
@@ -246,8 +236,8 @@ function useTable<P>(
 	}
 
 	const searchHandle = (searchInfo: any) => {
-		current.value = 1;
-		pageSize.value = 10;
+		current.value = c;
+		pageSize.value = p;
 		if(searchInfo.currentPage) {
 			state.pagination.current = searchInfo.currentPage
 		}
@@ -272,8 +262,8 @@ function useTable<P>(
 
 	const resetHandle = () => {
 		state.searchInfo = {}
-		current.value = 1;
-		pageSize.value = 10;
+		current.value = c;
+		pageSize.value = p;
 		_request({})
 	}
 
