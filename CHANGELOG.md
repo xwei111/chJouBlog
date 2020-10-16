@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/xwei111/chJouBlog/compare/v1.0.2...v1.1.0) (2020-10-16)
+
+
+### Bug Fixes
+
+* **2020-09-03-vue3-usetable:** 初始化分页bug ([f252c40](https://github.com/xwei111/chJouBlog/commit/f252c40009a0239b649810e7e9ef21b0a532d47b))
+* **2020-09-03-vue3-usetable.md:** 修复useTable bug ([6b88a06](https://github.com/xwei111/chJouBlog/commit/6b88a06843a3a4fbd63e3070de893fe4c2d8f68c))
+
 ### [1.0.2](https://github.com/xwei111/chJouBlog/compare/v1.0.1...v1.0.2) (2020-07-23)
 
 
