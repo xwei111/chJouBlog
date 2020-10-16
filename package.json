@@ -35,5 +35,9 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "async-validator": "1.11.5",
+    "element-ui": "^2.13.2"
   }
 }

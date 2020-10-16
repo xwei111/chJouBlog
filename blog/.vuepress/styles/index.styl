@@ -3,3 +3,42 @@ img{
     border-radius: 5px;
     box-sizing: border-box;
 }
+html {
+    background: #ffffff;
+    filter: saturate(1.1);
+}
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+@keyframes blur {
+    0% {
+        letter-spacing: -5px;
+        filter: blur(3px);
+    }
+
+    50% {
+        filter: blur(5px);
+    }
+
+    100% {
+        letter-spacing: 5px;
+        filter: blur(0);
+        color: #000;
+    }
+}
+@keyframes filterBallMove {
+    50% {
+        left: 140px;
+    }
+}
+
+@keyframes filterBallMove2 {
+    50% {
+        right: 140px;
+    }
+}
