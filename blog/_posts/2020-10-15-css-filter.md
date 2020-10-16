@@ -10,7 +10,7 @@ location: 杭州滨江
 
 ## 前言
 
-css有很多有意思的且强大的属性，```filter```绝对其中一个，除了某些老古董，绝大的浏览器都已经支持，瑕不掩瑜，一起来看看神奇的```filter```吧
+css有很多有意思的且强大的属性，```filter```绝对其中一个，除了某些老古董，绝大的浏览器都已经支持，一起来看看神奇的```filter```吧
 
 ## filter属性
 
@@ -22,7 +22,7 @@ css有很多有意思的且强大的属性，```filter```绝对其中一个，�
 
 ### brightness亮度
 
-```brightness```设置亮度，默认为1，值越大月亮越小越黑
+```brightness```设置亮度，默认为1，值越大越小越黑
 
 <css-filter-Blur title="亮度" kind="brightness" :defaultValue="160"  :max="500"/>
 
@@ -70,7 +70,7 @@ css有很多有意思的且强大的属性，```filter```绝对其中一个，�
 
 ### drop-shadow阴影
 
-与```box-shadow```不同的是```drop-shadow```可以给图片非透明部门添加阴影，如下：
+与```box-shadow```不同的是```drop-shadow```可以给图片非透明部分添加阴影，如下：
 
 ```css
 .box_shadow { box-shadow: 0px 0px 10px #f00; }
