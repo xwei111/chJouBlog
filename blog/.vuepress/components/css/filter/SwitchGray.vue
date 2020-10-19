@@ -1,6 +1,6 @@
 <template>
 <div>
-    <p>一键置灰:</p>
+    <p>一键置灰(还记得汶川纪念日页面变灰吗):</p>
     <el-switch v-model="vl"></el-switch>
     <p>以下demo在移动端体验更好</p>
     <p>暗黑模式:</p>

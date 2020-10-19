@@ -87,11 +87,11 @@ css有很多有意思的且强大的属性，```filter```绝对其中一个，�
 ```js
 // 一键置灰
 const el = document.getElementsByClassName('vuepress-blog-theme-content')[0];
-el.style['filter'] = newVl ? `grayscale(1)` : ''
-el.style['-webkit-filter'] = newVl ? `grayscale(1)` : ''
-el.style['-moz-filter'] = newVl ? `grayscale(1)` : ''
-el.style['-ms-filter'] = newVl ? `grayscale(1)` : ''
-el.style['-o-filter'] = newVl ? `grayscale(1)` : ''
+el.style['filter'] = 'grayscale(1)'
+el.style['-webkit-filter'] = 'grayscale(1)'
+el.style['-moz-filter'] = 'grayscale(1)'
+el.style['-ms-filter'] = 'grayscale(1)'
+el.style['-o-filter'] = 'grayscale(1)'
 ```
 
 <css-filter-SwitchGray />
