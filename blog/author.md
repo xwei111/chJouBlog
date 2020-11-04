@@ -17,6 +17,12 @@ layout: AuthorLayout
 
 [xw-ui](https://chasejourney.top/#/home/index)
 
+* 微信小程序
+
+快绘 
+
+![An image](./.vuepress/public/quickdraw/20201103quickdraw5.jpg)
+
 * 效果
 
 [飘雪](https://chasejourney.top/three_demo/index-10.html)<br/>
@@ -27,4 +33,3 @@ layout: AuthorLayout
 [奔跑的骏马](https://chasejourney.top/three_demo/index-21.html)<br/>
 [粒子模型转化](https://chasejourney.top/three_demo/index-22.html)<br/>
 
-### The author is on his way
