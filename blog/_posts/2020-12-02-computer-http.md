@@ -3,6 +3,7 @@ title: 输入url发生了什么--HTTP
 date: 2020-12-02
 tags: 
   - 计算机知识
+  - HTTP
 author: 追旅
 location: 杭州滨江 
 ---

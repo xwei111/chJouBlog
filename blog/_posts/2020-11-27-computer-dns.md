@@ -3,6 +3,7 @@ title: 输入url发生了什么--DNS解析
 date: 2020-11-27
 tags: 
   - 计算机知识
+  - DNS
 author: 追旅
 location: 杭州滨江 
 ---
