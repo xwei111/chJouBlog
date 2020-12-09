@@ -145,13 +145,13 @@ Cache-Control > expires
 
 #### last-modified/if-modified-since
 
-如果第一次请求头信息带有```last-modified```信息后续请求会携带```if-modified-since```，```last-modified```记录的是资源的最后修改时间，```if-modified-since```记录的是上次```last-modified```，服务器会将浏览器传过来的```if-modified-since```和资源修改时间做对比，如果时间一致则表示资源未修改返回304，拉取缓存的资源，如果时间不一致则向服务器请求新的资源，更新```last-modified```为新的修改时间
+如果第一次请求服务器返回的头信息带有```last-modified```信息后续请求会携带```if-modified-since```，```last-modified```记录的是资源的最后修改时间，```if-modified-since```记录的是上次```last-modified```，服务器会将浏览器传过来的```if-modified-since```和资源修改时间做对比，如果时间一致则表示资源未修改返回304，拉取缓存的资源，如果时间不一致则向服务器请求新的资源，更新```last-modified```为新的修改时间
 
 缺点是只能精确定秒，秒以内修改无法，假如一个文件1s内修改了n次，```last-modified```是无法捕获的。另外一个问题是只要文件被修改了，无论内容是否有变化，都会以最新的修改时间为判断依据，这就导致了一些没必要的请求，接下来的etag就是来解决这个问题的
 
 #### etag/if-none-match
 
-和```last-modified```相同，第一次请求携带了```etag```后续的请求会携带```if-none-match```，```if-none-match```记录的是上次的```eatg```，```etag```和```last-modified```判断同样过程相似，服务器对比浏览器传过来的```if-none-match```和当前内容的标识字符串，不同则返回新的资源和新的标识字符串
+和```last-modified```相同，第一次请求服务器返回的头信息携带了```etag```后续的请求会携带```if-none-match```，```if-none-match```记录的是上次的```eatg```，```etag```和```last-modified```判断同样过程相似，服务器对比浏览器传过来的```if-none-match```和当前内容的标识字符串，不同则返回新的资源和新的标识字符串
 
 #### 与```last-modified```区别：
 
