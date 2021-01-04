@@ -57,6 +57,15 @@ output: {
 }
 ```
 
+### devtool
+
+```js
+// 生产环境关闭sourcemap
+{
+  devtool: process.env.NODE_ENV === "production" ? false : "cheap-module-eval-source-map"
+}
+```
+
 ### resolve.extensions
 
 ```js
@@ -211,7 +220,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 ### MiniCssExtractPlugin
 
 ```js
-// 抽离、压缩css，css通常使用contenthash，避免js改动哈希值的变化
+// 抽离css，css通常使用contenthash，避免js改动哈希值的变化
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 {
   module: {
@@ -268,13 +277,68 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin')
 }
 ```
 
-## hash、chunkhash、contenthash
+## 三个hash区别
 
-* ```hash```：整个项目只要有文件更改的就会变化
+* ```hash```：整体项目有变化就会变化
 * ```chunkhash```：根据不同的入口文件解析、构建，生成哈希值，将一些共用模块和逻辑抽出，则不会受业务逻辑的变化影响
-* ```contenthash```： 只有当前文件内容变化才会变化，所以通常将```css```抽离出```js```，加上```contenthash```，即使```js```变化了，只要```css```没变则不会发生变化
+* ```contenthash```： 当前文件内容变化才会变化，所以通常将```css```抽离出```js```，加上```contenthash```，即使```js```变化了，只要```css```没变则不会发生变化
 
 其实这些hash的出现是为了更好的缓存，或者说最小化的更新资源
+
+## tree shaking
+
+```tree shaking```：移除打包时未被引用的代码，针对的是```ES6```模块中```export```和```import```的静态结构特性，生产环境下默认开启
+
+```js
+// util.js
+export const add = (a, b) => a + b;
+export const min = (a, b) => a - b;
+// index.js  -------- require引用无论util.js中方法是否被使用均会被打包
+const fns = require('./util.js)
+// index.js  -------- import引用打包只会返回被引用的，压缩时（uglifyjs-webpack-plugin）会将没有引用的代码剔除
+import { add } from './util.js' // min方法压缩后会被剔除掉
+```
+
+## scope hoisting
+
+```scope hoisting```: 被称之为```作用域提升```，原理就是分析模块间的依赖关系，尽可能的将一些零散的模块合并到一个函数中，可以让代码文件更小，运行更快，webpack3+支持
+
+```scope hoisting```同样需要使用```ES6```模块化语句，同理```tree shaking```
+
+```js
+// 使用
+{
+  plugins: [
+    new webpack.optimize.ModuleConcatenationPlugin()
+  ]
+}
+```
+
+## 动态加载
+
+```js
+// splitChunks配合使用实现异步加载资源
+// 旧
+require.ensure()
+// 新
+import() // import('./a.js').then(res=>consolg.log(res))
+
+// import()只是对值得引用，类似require，属于运行时调用，而import是编译时调用，例子如下
+// test.js
+export let num = 1;
+export const add = () => num++;
+// index.js import()
+import('./test').then(({num, add})=>{
+  console.log(num) // 1
+  add()
+  console.log(num) // 1
+})
+// index.js import
+import { num, add } from './test';
+console.log(num) //1
+add()
+console.log(num) // 2
+```
 
 ## 结语
 
