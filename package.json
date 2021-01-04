@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "async-validator": "1.11.5",
+    "dayjs": "^1.10.1",
     "element-ui": "^2.13.2"
   }
 }
