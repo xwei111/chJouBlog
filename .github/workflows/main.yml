@@ -14,10 +14,11 @@ jobs:
         with:
           persist-credentials: false
         
-      # - name: Install and Build 
-      #   run: |
-      #     yarn install
-      #     npm run build
+      - name: Install and Build 
+        run: |
+          yarn install
+          yarn add @vuepress/plugin-blog@1.7.1 -D
+          npm run build
 
       - name: Deploy 
         uses: JamesIves/github-pages-deploy-action@releases/v3

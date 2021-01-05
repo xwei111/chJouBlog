@@ -19,6 +19,7 @@
   "devDependencies": {
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
+    "@vuepress/plugin-blog": "1.7.1",
     "@vuepress/theme-blog": "^2.2.0",
     "commitizen": "^4.1.2",
     "cp-cli": "^2.0.0",
