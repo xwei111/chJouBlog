@@ -16,6 +16,7 @@ jobs:
 
       - name: Install and Build 
         run: |
+          rm -rf node_modules/
           yarn install
           npm run build
       - name: Deploy 
