@@ -13,15 +13,12 @@ jobs:
         uses: actions/checkout@v2 
         with:
           persist-credentials: false
-          
-      - name: Delete
-        run: | 
-          rm -rf node_modules/
         
-      - name: Install and Build 
-        run: |
-          yarn install
-          npm run build
+      # - name: Install and Build 
+      #   run: |
+      #     yarn install
+      #     npm run build
+
       - name: Deploy 
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
