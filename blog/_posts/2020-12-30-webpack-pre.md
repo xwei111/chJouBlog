@@ -217,6 +217,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 }
 ```
 
+### PrerenderSpaPlugin
+
+```js
+// 做预渲染、seo优化
+const PrerenderSpaPlugin = require('prerender-spa-plugin')；
+
+{
+  plugins: [
+    new PrerenderSPAPlugin({
+      staticDir: path.join(__dirname, 'dist'),
+      routes: [ '/', '/about' ],
+    })
+  ]
+}
+```
+
 ### MiniCssExtractPlugin
 
 ```js
