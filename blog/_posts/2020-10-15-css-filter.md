@@ -28,7 +28,7 @@ css有很多有意思的且强大的属性，```filter```绝对其中一个，�
 
 ### contrast对比度
 
-```brightness```设置对比度，默认为1，当值为0时图像全黑
+```contrast```设置对比度，默认为1，当值为0时图像全黑
 
 <css-filter-Blur title="对比度" kind="contrast" :defaultValue="500"  :max="1000"/>
 
