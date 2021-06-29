@@ -67,6 +67,13 @@ const mongodbUrl = `mongodb+srv://xxx:xxxxx@lesscode.4pxcv.mongodb.net/myFirstDa
 ```js
 // 安装后默认启动了，端口默认为27017，通过service启动、停止、重启、查看状态
 apt-get install mongodb
+// 链接mongodb
+mongo
+// monggodb相关命令
+use dbName
+show dbs
+show collections
+db.createCollection(name, options)
 ```
 
 * 链接
@@ -82,6 +89,11 @@ const mongodbUrl = `mongodb://localhost:27017/lesscode`
 
 ```js
 npm install pm2 -g
+// pm2相关命令
+pm2 list
+pm2 stop xx
+pm2 start xx
+pm2 restart xx
 ```
 
 * 启动node服务
