@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>提升项目档次-封装 | 追旅</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="
+项目开发是小伙伴们的家常便饭，追旅也参与了很多项目的开发，抛去大厂基本都是在做傻瓜式式开发，追旅大多数时候也是在着` ...">
+    
+    <link rel="preload" href="/chJouBlog/assets/css/0.styles.20a321b7.css" as="style"><link rel="preload" href="/chJouBlog/assets/js/app.df98fc69.js" as="script"><link rel="preload" href="/chJouBlog/assets/js/14.37cc0a42.js" as="script"><link rel="preload" href="/chJouBlog/assets/js/3.4ccbfffa.js" as="script"><link rel="preload" href="/chJouBlog/assets/js/59.552f2d03.js" as="script"><link rel="prefetch" href="/chJouBlog/assets/js/10.eb90b699.js"><link rel="prefetch" href="/chJouBlog/assets/js/11.613b8300.js"><link rel="prefetch" href="/chJouBlog/assets/js/12.f5ae9dea.js"><link rel="prefetch" href="/chJouBlog/assets/js/13.472de763.js"><link rel="prefetch" href="/chJouBlog/assets/js/15.e111376e.js"><link rel="prefetch" href="/chJouBlog/assets/js/16.e211f299.js"><link rel="prefetch" href="/chJouBlog/assets/js/17.2ca3c4ab.js"><link rel="prefetch" href="/chJouBlog/assets/js/18.66089603.js"><link rel="prefetch" href="/chJouBlog/assets/js/19.319f9cb5.js"><link rel="prefetch" href="/chJouBlog/assets/js/20.3b93ecf9.js"><link rel="prefetch" href="/chJouBlog/assets/js/21.df2c553f.js"><link rel="prefetch" href="/chJouBlog/assets/js/22.54e5bc20.js"><link rel="prefetch" href="/chJouBlog/assets/js/23.3669dbcf.js"><link rel="prefetch" href="/chJouBlog/assets/js/24.23c3a1bc.js"><link rel="prefetch" href="/chJouBlog/assets/js/25.fe8ae915.js"><link rel="prefetch" href="/chJouBlog/assets/js/26.fb04faff.js"><link rel="prefetch" href="/chJouBlog/assets/js/27.494cd469.js"><link rel="prefetch" href="/chJouBlog/assets/js/28.b537d763.js"><link rel="prefetch" href="/chJouBlog/assets/js/29.c6b82702.js"><link rel="prefetch" href="/chJouBlog/assets/js/30.d5ede3c7.js"><link rel="prefetch" href="/chJouBlog/assets/js/31.37563744.js"><link rel="prefetch" href="/chJouBlog/assets/js/32.a98911b1.js"><link rel="prefetch" href="/chJouBlog/assets/js/33.57a4c47f.js"><link rel="prefetch" href="/chJouBlog/assets/js/34.05b0a634.js"><link rel="prefetch" href="/chJouBlog/assets/js/35.7fd1452c.js"><link rel="prefetch" href="/chJouBlog/assets/js/36.d441cd4a.js"><link rel="prefetch" href="/chJouBlog/assets/js/37.2726b510.js"><link rel="prefetch" href="/chJouBlog/assets/js/38.3aa1c659.js"><link rel="prefetch" href="/chJouBlog/assets/js/39.e186f7af.js"><link rel="prefetch" href="/chJouBlog/assets/js/4.bebee178.js"><link rel="prefetch" href="/chJouBlog/assets/js/40.07797c9b.js"><link rel="prefetch" href="/chJouBlog/assets/js/41.cd49bb5e.js"><link rel="prefetch" href="/chJouBlog/assets/js/42.b3554f77.js"><link rel="prefetch" href="/chJouBlog/assets/js/43.1c89fbfa.js"><link rel="prefetch" href="/chJouBlog/assets/js/44.c58cb498.js"><link rel="prefetch" href="/chJouBlog/assets/js/45.556fe7e7.js"><link rel="prefetch" href="/chJouBlog/assets/js/46.a5cabb1c.js"><link rel="prefetch" href="/chJouBlog/assets/js/47.ddc43d72.js"><link rel="prefetch" href="/chJouBlog/assets/js/48.da8a5350.js"><link rel="prefetch" href="/chJouBlog/assets/js/49.bf04c2fa.js"><link rel="prefetch" href="/chJouBlog/assets/js/5.00acd6dc.js"><link rel="prefetch" href="/chJouBlog/assets/js/50.cc93d227.js"><link rel="prefetch" href="/chJouBlog/assets/js/51.d8307f48.js"><link rel="prefetch" href="/chJouBlog/assets/js/52.d330943d.js"><link rel="prefetch" href="/chJouBlog/assets/js/53.0d7d674d.js"><link rel="prefetch" href="/chJouBlog/assets/js/54.aee67b2f.js"><link rel="prefetch" href="/chJouBlog/assets/js/55.9166b10e.js"><link rel="prefetch" href="/chJouBlog/assets/js/56.0099774f.js"><link rel="prefetch" href="/chJouBlog/assets/js/57.7cb0fe29.js"><link rel="prefetch" href="/chJouBlog/assets/js/58.df76f621.js"><link rel="prefetch" href="/chJouBlog/assets/js/6.746e42d2.js"><link rel="prefetch" href="/chJouBlog/assets/js/60.ce6a54ba.js"><link rel="prefetch" href="/chJouBlog/assets/js/61.5d942aad.js"><link rel="prefetch" href="/chJouBlog/assets/js/62.afe1b875.js"><link rel="prefetch" href="/chJouBlog/assets/js/63.0ef1eaa6.js"><link rel="prefetch" href="/chJouBlog/assets/js/7.71c40505.js"><link rel="prefetch" href="/chJouBlog/assets/js/8.dd3ced22.js"><link rel="prefetch" href="/chJouBlog/assets/js/9.0773d380.js"><link rel="prefetch" href="/chJouBlog/assets/js/vuejs-paginate.3ca14eab.js">
+    <link rel="stylesheet" href="/chJouBlog/assets/css/0.styles.20a321b7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/chJouBlog/" class="nav-link home-link">追旅 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/chJouBlog/" class="nav-link">Blog</a></li><li class="nav-item"><a href="/chJouBlog/tag/" class="nav-link">Tags</a></li><li class="nav-item"><a href="/chJouBlog/author.html" class="nav-link">Author</a></li><li class="nav-item"><a href="/chJouBlog/log.html" class="nav-link">Log</a></li><li class="nav-item"><a href="https://github.com/xwei111/chJouBlog" target="_blank" rel="noopener noreferrer" class="nav-link external">GitHub</a></li><li class="nav-item"><a href="https://xwei111.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">XW-UI</a></li><li class="nav-item"><a href="https://ludd.link" target="_blank" rel="noopener noreferrer" class="nav-link external">Ludd</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/chJouBlog/" class="nav-link mobile-home-link">追旅 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/chJouBlog/" class="nav-link">Blog</a></li><li class="mobile-nav-item"><a href="/chJouBlog/tag/" class="nav-link">Tags</a></li><li class="mobile-nav-item"><a href="/chJouBlog/author.html" class="nav-link">Author</a></li><li class="mobile-nav-item"><a href="/chJouBlog/log.html" class="nav-link">Log</a></li><li class="mobile-nav-item"><a href="https://github.com/xwei111/chJouBlog" target="_blank" rel="noopener noreferrer" class="nav-link external">GitHub</a></li><li class="mobile-nav-item"><a href="https://xwei111.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">XW-UI</a></li><li class="mobile-nav-item"><a href="https://ludd.link" target="_blank" rel="noopener noreferrer" class="nav-link external">Ludd</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        提升项目档次-封装
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">追旅</span> <span itemprop="address">   in 杭州滨江</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2021-06-08T00:00:00.000Z">
+      Tue Jun 08 2021
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/chJouBlog/tag/封装" data-v-42ccfcd5><span data-v-42ccfcd5>封装</span></a></li><li class="post-tag" data-v-42ccfcd5><a href="/chJouBlog/tag/hooks" data-v-42ccfcd5><span data-v-42ccfcd5>hooks</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>项目开发是小伙伴们的家常便饭，追旅也参与了很多项目的开发，抛去大厂基本都是在做<code>傻瓜式</code>式开发，追旅大多数时候也是在着<code>傻瓜式</code>的开发，例如用<code>umijs</code>、<code>vue-cli</code>或者<code>react</code>的各种脚手架（我们不谈这些脚手架的优劣），参考脚手架的api基本上也就可以快速启动一个项目，相当的方便，这让开发者可以把更多的精力投入业务开发中去，所以想要在这块有所突破要么<code>webpack</code>自行撸一套脚手架，要么想尤大大那样创造新大陆<code>vite</code>，追旅这里分享一下更实际的业务开发，如何更好的落地组件化模块化</p> <h2 id="ui层"><a href="#ui层" class="header-anchor">#</a> UI层</h2> <p>ui层组件的抽离，相信大家都做过很多了</p> <h3 id="基础组件"><a href="#基础组件" class="header-anchor">#</a> 基础组件</h3> <p><code>element-ui</code>、<code>antd-design</code>等组件库中你看得到的均属于基础组件，组件库不包含的基础组件也是基础组件，只是要自己去封装，对于绝大多数场景来说这些组件已经是最小单位了，但是在实际项目中基础组件也是需要进行业务封装的，原因如下：</p> <ol><li>基础组件在书写业务时也会导致大量的重复性代码和功能</li> <li>基础组件在组装成业务组件时也有可能因为不满足需求需要拓展</li> <li>ui层的操作不变可以通过控制数据层影响ui层</li></ol> <p>以<code>table</code>和<code>form</code>为<code>demo</code>（后续会使用到）：</p> <h4 id="form"><a href="#form" class="header-anchor">#</a> form</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// form.vue</span>
+<span class="token comment">// 根据实际业务去适当的封装form</span>
+<span class="token comment">// 后续表单类提交的均使用form组件</span>
+<span class="token comment">// 不必一次性封装完毕，遇见差异元素添加</span>
+<span class="token operator">&lt;</span>template lang<span class="token operator">=</span><span class="token string">&quot;pug&quot;</span><span class="token operator">&gt;</span>
+el<span class="token operator">-</span><span class="token function">form</span><span class="token punctuation">(</span>
+  ref<span class="token operator">=</span><span class="token string">&quot;formRef&quot;</span>
+  <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;form-box&quot;</span>
+  <span class="token operator">:</span>model<span class="token operator">=</span><span class="token string">&quot;formData&quot;</span>
+  <span class="token operator">:</span>label<span class="token operator">-</span>position<span class="token operator">=</span><span class="token string">&quot;labelPosition&quot;</span>
+<span class="token punctuation">)</span>
+  el<span class="token operator">-</span><span class="token function">row</span><span class="token punctuation">(</span>
+    <span class="token operator">:</span>gutter<span class="token operator">=</span><span class="token string">'20'</span>
+    <span class="token operator">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;inline ? '' : 'form-column'&quot;</span>
+  <span class="token punctuation">)</span>
+    el<span class="token operator">-</span><span class="token function">col</span><span class="token punctuation">(</span>
+      <span class="token operator">:</span>span<span class="token operator">=</span><span class="token string">&quot;inline ? item.span ? item.span : 4 : 24&quot;</span>
+      v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">&quot;item in formConfig&quot;</span>
+      <span class="token operator">:</span>key<span class="token operator">=</span><span class="token string">&quot;item.key&quot;</span>
+    <span class="token punctuation">)</span>
+      el<span class="token operator">-</span>form<span class="token operator">-</span><span class="token function">item</span><span class="token punctuation">(</span>
+        style<span class="token operator">=</span><span class="token string">&quot;width: 100%;&quot;</span>
+        <span class="token operator">:</span>label<span class="token operator">=</span><span class="token string">&quot;item.label&quot;</span>
+        <span class="token operator">:</span>prop<span class="token operator">=</span><span class="token string">&quot;item.key&quot;</span>
+      <span class="token punctuation">)</span>
+        <span class="token comment">//- input</span>
+        el<span class="token operator">-</span><span class="token function">input</span><span class="token punctuation">(</span>
+          style<span class="token operator">=</span><span class="token string">&quot;width: 100%;&quot;</span>
+          v<span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">&quot;item.type === 'input'&quot;</span>
+          v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">&quot;formData[item.key]&quot;</span>
+          <span class="token operator">:</span>placeholder<span class="token operator">=</span><span class="token string">&quot;item.placeholder ? item.placeholder: '请输入'&quot;</span>
+          <span class="token operator">:</span>disabled<span class="token operator">=</span><span class="token string">&quot;item.disabled ? item.disabled : false&quot;</span>
+          <span class="token operator">:</span>type<span class="token operator">=</span><span class="token string">&quot;item.kind ? item.kind : 'text'&quot;</span>
+        <span class="token punctuation">)</span>
+        <span class="token comment">//- select</span>
+        el<span class="token operator">-</span><span class="token function">select</span><span class="token punctuation">(</span>
+          style<span class="token operator">=</span><span class="token string">&quot;width: 100%;&quot;</span>
+          v<span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">&quot;item.type === 'select'&quot;</span>
+          v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">&quot;formData[item.key]&quot;</span>
+          <span class="token operator">:</span>disabled<span class="token operator">=</span><span class="token string">&quot;item.disabled ? item.disabled : false&quot;</span>
+          <span class="token operator">:</span>placeholder<span class="token operator">=</span><span class="token string">&quot;item.placeholder ? item.placeholder: '请选择'&quot;</span>
+        <span class="token punctuation">)</span>
+          el<span class="token operator">-</span><span class="token function">option</span><span class="token punctuation">(</span>
+            v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">&quot;child in item.options&quot;</span>
+            <span class="token operator">:</span>key<span class="token operator">=</span><span class="token string">&quot;item.otherKeys ? child[item.otherKeys.value] : child.value&quot;</span>
+            <span class="token operator">:</span>label<span class="token operator">=</span><span class="token string">&quot;item.otherKeys ? child[item.otherKeys.label] : child.label&quot;</span>
+            <span class="token operator">:</span>value<span class="token operator">=</span><span class="token string">&quot;item.otherKeys ? child[item.otherKeys.value] : child.value&quot;</span>
+          <span class="token punctuation">)</span>
+    <span class="token function">div</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;inline ? 'form-sumbit' : ''&quot;</span><span class="token punctuation">)</span>
+      slot
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    formData<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> Object<span class="token punctuation">,</span>
+      <span class="token function-variable function">default</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    formConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> Array<span class="token punctuation">,</span>
+      <span class="token function-variable function">default</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    inline<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> Boolean<span class="token punctuation">,</span>
+      <span class="token keyword">default</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    labelPosition<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> String<span class="token punctuation">,</span>
+      <span class="token keyword">default</span><span class="token operator">:</span> <span class="token string">'top'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> formRef <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">const</span> <span class="token function-variable function">submitHandle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        formRef<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span><span class="token parameter">valid</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          valid <span class="token operator">&amp;&amp;</span> <span class="token function">resolve</span><span class="token punctuation">(</span>valid<span class="token punctuation">)</span>
+          <span class="token operator">!</span>valid <span class="token operator">&amp;&amp;</span> <span class="token function">reject</span><span class="token punctuation">(</span>valid<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">const</span> <span class="token function-variable function">resetHandle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> formRef<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">resetFields</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">const</span> <span class="token function-variable function">getForm</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> formRef<span class="token punctuation">.</span>value
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      formRef<span class="token punctuation">,</span>
+      submitHandle<span class="token punctuation">,</span>
+      resetHandle<span class="token punctuation">,</span>
+      getForm
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><h4 id="table"><a href="#table" class="header-anchor">#</a> table</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// table.vue</span>
+<span class="token operator">&lt;</span>template lang<span class="token operator">=</span><span class="token string">&quot;pug&quot;</span><span class="token operator">&gt;</span>
+el<span class="token operator">-</span><span class="token function">table</span><span class="token punctuation">(</span><span class="token operator">:</span>data<span class="token operator">=</span><span class="token string">&quot;dataSource&quot;</span><span class="token punctuation">,</span> v<span class="token operator">-</span>loading<span class="token operator">=</span><span class="token string">&quot;loading&quot;</span><span class="token punctuation">)</span>
+  el<span class="token operator">-</span>table<span class="token operator">-</span><span class="token function">column</span><span class="token punctuation">(</span>
+    v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">&quot;(item, index) in columns&quot;</span>
+    <span class="token operator">:</span>key<span class="token operator">=</span><span class="token string">&quot;item.key ? item.key : index&quot;</span>
+    <span class="token operator">:</span>label<span class="token operator">=</span><span class="token string">&quot;item.label&quot;</span>
+    <span class="token operator">:</span>width<span class="token operator">=</span><span class="token string">&quot;item.width&quot;</span>
+    <span class="token operator">:</span>fixed<span class="token operator">=</span><span class="token string">&quot;item.fixed ? item.fixed : false&quot;</span>
+  <span class="token punctuation">)</span>
+    <span class="token function">template</span><span class="token punctuation">(</span>slot<span class="token operator">-</span>scope<span class="token operator">=</span><span class="token string">&quot;scope&quot;</span><span class="token punctuation">)</span>
+      <span class="token function">span</span><span class="token punctuation">(</span>v<span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">&quot;item.key !== 'operate'&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> item<span class="token punctuation">.</span>render <span class="token operator">?</span>  item<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>scope<span class="token punctuation">.</span>row<span class="token punctuation">,</span> scope<span class="token punctuation">.</span>row<span class="token punctuation">[</span>item<span class="token punctuation">.</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">:</span> scope<span class="token punctuation">.</span>row<span class="token punctuation">[</span>item<span class="token punctuation">.</span>key<span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token function">div</span><span class="token punctuation">(</span>v<span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">&quot;item.key === 'operate'&quot;</span><span class="token punctuation">)</span>
+        el<span class="token operator">-</span><span class="token function">button</span><span class="token punctuation">(</span>
+          v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">&quot;(btn, index) in item.options&quot;</span>
+          <span class="token operator">:</span>key<span class="token operator">=</span><span class="token string">&quot;index&quot;</span>
+          type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span>
+          @click<span class="token operator">=</span><span class="token string">&quot;() =&gt; buttonHandle({row: scope.row, label: btn.render ? btn.render(scope.row) : btn.label})&quot;</span>
+        <span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> btn<span class="token punctuation">.</span>render <span class="token operator">?</span> btn<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>scope<span class="token punctuation">.</span>row<span class="token punctuation">)</span> <span class="token operator">:</span> btn<span class="token punctuation">.</span>label <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    dataSource<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> Array<span class="token punctuation">,</span>
+      <span class="token function-variable function">default</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    columns<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> Array<span class="token punctuation">,</span>
+      <span class="token function-variable function">default</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    loading<span class="token operator">:</span> Boolean
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token parameter">props<span class="token punctuation">,</span> <span class="token punctuation">{</span> emit <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">buttonHandle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">detail</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'buttonHandle'</span><span class="token punctuation">,</span> detail<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      buttonHandle
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="业务组件"><a href="#业务组件" class="header-anchor">#</a> 业务组件</h3> <p>一次性的业务组件可以一次性封装，但绝大多数场景不是这样的，还是以<code>form</code>和<code>table</code>为例，不单单是只有列表查询的场景会使用到<code>form</code>和<code>table</code>，<code>新增</code>、<code>添加</code>等场景会用到<code>form</code>，对于其他场景亦会用到<code>table</code>，假设我们将上述两个基础组件放在一起没有做抽离，我也只有列表查询一个固定场景，而对于其他表单提交场景或者列表展示场景则需要额外的再去写一个<code>form</code>或者<code>table</code>组件，这样导致的问题是：</p> <ol><li>场景单一、无法服用</li> <li>业务组件中的基础组件无法复用，利用度不高</li> <li>对于样式统一度较高的平台不利于统一</li></ol> <p>所以结论就是：</p> <p><code>业务组件 += 基础组件</code></p> <p>业务组件必定是基础组件组装的（除非你能保证你永远不在用着业务组件中的基础组件），最终查询表单场景ui层组件代码如下（稍后讨论逻辑层）：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>template lang<span class="token operator">=</span><span class="token string">&quot;pug&quot;</span><span class="token operator">&gt;</span>
+<span class="token punctuation">.</span>list
+  <span class="token function">Form</span><span class="token punctuation">(</span>
+    ref<span class="token operator">=</span><span class="token string">&quot;formRef&quot;</span>
+    <span class="token operator">:</span>formData<span class="token operator">=</span><span class="token string">&quot;formData&quot;</span><span class="token punctuation">,</span>
+    <span class="token operator">:</span>formConfig<span class="token operator">=</span><span class="token string">&quot;formConfig&quot;</span>
+  <span class="token punctuation">)</span>
+    el<span class="token operator">-</span><span class="token function">button</span><span class="token punctuation">(</span>type<span class="token operator">=</span><span class="token string">&quot;primary&quot;</span><span class="token punctuation">,</span> @click<span class="token operator">=</span><span class="token string">&quot;searchFormHandle&quot;</span><span class="token punctuation">)</span> 搜索
+    el<span class="token operator">-</span><span class="token function">button</span><span class="token punctuation">(</span>@click<span class="token operator">=</span><span class="token string">&quot;resetFormHandle&quot;</span><span class="token punctuation">)</span> 重置
+  <span class="token function">Table</span><span class="token punctuation">(</span><span class="token operator">:</span>dataSource<span class="token operator">=</span><span class="token string">&quot;dataSource&quot;</span><span class="token punctuation">,</span> <span class="token operator">:</span>columns<span class="token operator">=</span><span class="token string">&quot;columns&quot;</span><span class="token punctuation">,</span> <span class="token operator">:</span>loading<span class="token operator">=</span><span class="token string">&quot;loading&quot;</span><span class="token punctuation">)</span>
+  <span class="token function">Pagination</span><span class="token punctuation">(</span><span class="token operator">:</span>pagination<span class="token operator">=</span><span class="token string">&quot;pagination&quot;</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+</code></pre></div><h2 id="hooks-逻辑层"><a href="#hooks-逻辑层" class="header-anchor">#</a> hooks-逻辑层</h2> <p><code>react16+</code>hooks刚出来的时候追旅在的公司刚好也是<code>react</code>的，怀着激动的心情去尝试了一下，当时的感受就是逻辑抽离从未如此简单，之后就是尤大大的<code>vue3.x</code>也采用类似的方案，组合式API是两大框架最直观的特点，这极大的方便了我们对逻辑层的抽离，继续回到我们的主题</p> <p>这里顺便讲一下基础逻辑和工具的区别，<code>hooks</code>的本质是对公共逻辑的抽离并暴露出相应的api，而工具如时间处理函数、数字转千分位格式等依然是属于<code>utils</code></p> <h3 id="mixin的问题"><a href="#mixin的问题" class="header-anchor">#</a> mixin的问题</h3> <p>组合式API问世之前，<code>mixin</code>是一种不错的处理重复逻辑的方式，但是<code>mixin</code>也有着问题，很难将逻辑的复用性和灵活性贯彻到底，以<code>vue</code>为列看一下<code>mixin</code>的问题：</p> <ol><li>复杂的生命周期</li> <li>需要了解<code>mixin</code>内命名，以防止命名冲突</li> <li>多个<code>mixin</code>一起使用时，命名重复之间的覆盖难以确定谁覆盖了谁</li> <li>多个<code>mixin</code>一起使用时难以维护，如：调用的方法难以确定哪里过来的，维护成本高</li> <li><code>mixin</code>无法传参，丢失了灵活性，导致使用场景局限</li></ol> <p>接下来，依然是以<code>table</code>和<code>form</code>为<code>demo</code>介绍：</p> <h3 id="usetbale"><a href="#usetbale" class="header-anchor">#</a> useTbale</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// useTable.js</span>
+<span class="token comment">// 如果你了解ts，建议使用ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> reactive<span class="token punctuation">,</span> toRefs<span class="token punctuation">,</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token comment">/**
+ * @param request 接口或Array&lt;any&gt;
+ * @param defaultParams 默认入参
+ * @function isInit 是否初始化调用
+ */</span>
+
+<span class="token keyword">function</span> <span class="token function">useTable</span><span class="token punctuation">(</span>
+  <span class="token parameter">request<span class="token punctuation">,</span>
+  defaultParams<span class="token punctuation">,</span>
+  isInit <span class="token operator">=</span> <span class="token boolean">true</span></span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> c <span class="token operator">=</span> defaultParams <span class="token operator">&amp;&amp;</span> defaultParams<span class="token punctuation">.</span>current <span class="token operator">?</span> defaultParams<span class="token punctuation">.</span>current <span class="token operator">:</span> <span class="token number">1</span>
+  <span class="token keyword">const</span> p <span class="token operator">=</span> defaultParams <span class="token operator">&amp;&amp;</span> defaultParams<span class="token punctuation">.</span>pageSize <span class="token operator">?</span> defaultParams<span class="token punctuation">.</span>pageSize <span class="token operator">:</span> <span class="token number">10</span>
+
+  <span class="token keyword">const</span> current <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> pageSize <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>
+
+  <span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    params<span class="token operator">:</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span> pageNo<span class="token operator">:</span> current<span class="token punctuation">,</span> pageSize<span class="token operator">:</span> pageSize <span class="token punctuation">}</span><span class="token punctuation">,</span> defaultParams<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    searchInfo<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    dataSource<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    loading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    pagination<span class="token operator">:</span> <span class="token punctuation">{</span>
+      current<span class="token operator">:</span> current<span class="token punctuation">,</span>
+      pageSize<span class="token operator">:</span> pageSize<span class="token punctuation">,</span>
+      total<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">page<span class="token punctuation">,</span> pageSize</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">pageChange</span><span class="token punctuation">(</span>page<span class="token punctuation">,</span> pageSize<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">onShowSizeChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">current<span class="token punctuation">,</span> size</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">showSizeChange</span><span class="token punctuation">(</span>current<span class="token punctuation">,</span> size<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token comment">// api请求</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">_request</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// json</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'[object Array]'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      state<span class="token punctuation">.</span>dataSource <span class="token operator">=</span> request
+      state<span class="token punctuation">.</span>pagination<span class="token punctuation">.</span>total <span class="token operator">=</span> request<span class="token punctuation">.</span>length
+    <span class="token punctuation">}</span>
+    <span class="token comment">// api 请求</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'[object Function]'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      state<span class="token punctuation">.</span>loading <span class="token operator">=</span> <span class="token boolean">true</span>
+      <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span>state<span class="token punctuation">.</span>params<span class="token punctuation">,</span> <span class="token operator">...</span>params <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        state<span class="token punctuation">.</span>loading <span class="token operator">=</span> <span class="token boolean">false</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> data<span class="token operator">:</span> <span class="token punctuation">{</span> code<span class="token punctuation">,</span> data <span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">=</span> res
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>code <span class="token operator">===</span> <span class="token string">'0'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">const</span> <span class="token punctuation">{</span> totalCount<span class="token punctuation">,</span> pagedRecords <span class="token punctuation">}</span> <span class="token operator">=</span> data <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+          state<span class="token punctuation">.</span>pagination<span class="token punctuation">.</span>total <span class="token operator">=</span> totalCount <span class="token operator">||</span> pagedRecords<span class="token punctuation">.</span>length
+          state<span class="token punctuation">.</span>dataSource <span class="token operator">=</span> pagedRecords
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 查询</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">searchHandle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">searchInfo</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    current<span class="token punctuation">.</span>value <span class="token operator">=</span> c
+    pageSize<span class="token punctuation">.</span>value <span class="token operator">=</span> p
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>searchInfo<span class="token punctuation">.</span>pageNo<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      state<span class="token punctuation">.</span>pagination<span class="token punctuation">.</span>current <span class="token operator">=</span> searchInfo<span class="token punctuation">.</span>pageNo
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>searchInfo<span class="token punctuation">.</span>pageSize<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      state<span class="token punctuation">.</span>pagination<span class="token punctuation">.</span>pageSize <span class="token operator">=</span> searchInfo<span class="token punctuation">.</span>pageSize
+    <span class="token punctuation">}</span>
+    state<span class="token punctuation">.</span>searchInfo <span class="token operator">=</span> searchInfo
+    <span class="token function">_request</span><span class="token punctuation">(</span>searchInfo<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 切换页数</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">pageChange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">page<span class="token punctuation">,</span> pageSize</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    current<span class="token punctuation">.</span>value <span class="token operator">=</span> page
+    state<span class="token punctuation">.</span>searchInfo<span class="token punctuation">.</span>pageNo <span class="token operator">=</span> page
+    <span class="token function">_request</span><span class="token punctuation">(</span>state<span class="token punctuation">.</span>searchInfo<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 切换条数</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">showSizeChange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">current<span class="token punctuation">,</span> size</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    pageSize<span class="token punctuation">.</span>value <span class="token operator">=</span> current
+    state<span class="token punctuation">.</span>searchInfo<span class="token punctuation">.</span>pageSize <span class="token operator">=</span> current
+    <span class="token function">_request</span><span class="token punctuation">(</span>state<span class="token punctuation">.</span>searchInfo<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 重置</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">resetHandle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    state<span class="token punctuation">.</span>searchInfo <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    current<span class="token punctuation">.</span>value <span class="token operator">=</span> c
+    pageSize<span class="token punctuation">.</span>value <span class="token operator">=</span> p
+    <span class="token function">_request</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 初始化数据</span>
+  isInit <span class="token operator">&amp;&amp;</span> <span class="token function">_request</span><span class="token punctuation">(</span>state<span class="token punctuation">.</span>params<span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token function">toRefs</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    searchHandle<span class="token punctuation">,</span>
+    resetHandle
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> useTable
+
+</code></pre></div><h3 id="useform"><a href="#useform" class="header-anchor">#</a> useForm</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// useForm.js</span>
+<span class="token comment">// 只针对追旅目前遇到的业务做相应封装</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> reactive<span class="token punctuation">,</span> toRefs <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>
+  formRef<span class="token punctuation">,</span>
+  formData<span class="token punctuation">,</span>
+  formConfig
+<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    formData<span class="token punctuation">,</span>
+    formConfig
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token comment">// 提交表单</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">submitHandle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">callback</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token punctuation">{</span> submitHandle <span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">=</span> formRef
+    <span class="token function">submitHandle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">callback</span><span class="token punctuation">(</span>state<span class="token punctuation">.</span>formData<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 重置表单</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">resetHandle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> formRef<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">resetHandle</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token comment">// 设置formConfig-options，异步下拉框等</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">setOptions</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">key<span class="token punctuation">,</span> options <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> item <span class="token operator">=</span> state<span class="token punctuation">.</span>formConfig<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> item<span class="token punctuation">.</span>key <span class="token operator">===</span> key<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>item<span class="token punctuation">)</span> <span class="token keyword">return</span>
+    item<span class="token punctuation">.</span>options <span class="token operator">=</span> options
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 查询formConfig-item</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">getConfig</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>formConfig<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> item<span class="token punctuation">.</span>key <span class="token operator">===</span> key<span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    submitHandle<span class="token punctuation">,</span>
+    resetHandle<span class="token punctuation">,</span>
+    setOptions<span class="token punctuation">,</span>
+    getConfig<span class="token punctuation">,</span>
+    <span class="token operator">...</span><span class="token function">toRefs</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>template lang<span class="token operator">=</span><span class="token string">&quot;pug&quot;</span><span class="token operator">&gt;</span>
+div
+  <span class="token function">Form</span><span class="token punctuation">(</span>
+    ref<span class="token operator">=</span><span class="token string">&quot;formRef&quot;</span>
+    <span class="token operator">:</span>formData<span class="token operator">=</span><span class="token string">&quot;formData&quot;</span><span class="token punctuation">,</span>
+    <span class="token operator">:</span>formConfig<span class="token operator">=</span><span class="token string">&quot;formConfig&quot;</span>
+  <span class="token punctuation">)</span>
+    el<span class="token operator">-</span><span class="token function">button</span><span class="token punctuation">(</span>type<span class="token operator">=</span><span class="token string">&quot;primary&quot;</span><span class="token punctuation">,</span> @click<span class="token operator">=</span><span class="token string">&quot;searchFormHandle&quot;</span><span class="token punctuation">)</span> 搜索
+    el<span class="token operator">-</span><span class="token function">button</span><span class="token punctuation">(</span>@click<span class="token operator">=</span><span class="token string">&quot;resetFormHandle&quot;</span><span class="token punctuation">)</span> 重置
+  <span class="token function">Table</span><span class="token punctuation">(</span><span class="token operator">:</span>dataSource<span class="token operator">=</span><span class="token string">&quot;dataSource&quot;</span><span class="token punctuation">,</span> <span class="token operator">:</span>columns<span class="token operator">=</span><span class="token string">&quot;columns&quot;</span><span class="token punctuation">,</span> <span class="token operator">:</span>loading<span class="token operator">=</span><span class="token string">&quot;loading&quot;</span><span class="token punctuation">)</span>
+  <span class="token function">Pagination</span><span class="token punctuation">(</span><span class="token operator">:</span>pagination<span class="token operator">=</span><span class="token string">&quot;pagination&quot;</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Form <span class="token keyword">from</span> <span class="token string">'@/components/qjd/form'</span>
+<span class="token keyword">import</span> Table <span class="token keyword">from</span> <span class="token string">'@/components/qjd/table'</span>
+<span class="token keyword">import</span> Pagination <span class="token keyword">from</span> <span class="token string">'@/components/qjd/pagination'</span>
+<span class="token keyword">import</span> useForm <span class="token keyword">from</span> <span class="token string">'@/hooks/useForm'</span>
+<span class="token keyword">import</span> useTable <span class="token keyword">from</span> <span class="token string">'@/hooks/useTable'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getSearchList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/api/list'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Form<span class="token punctuation">,</span>
+    Table<span class="token punctuation">,</span>
+    Pagination<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token parameter">props<span class="token punctuation">,</span> <span class="token punctuation">{</span> root <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> formRef <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> columns <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> label<span class="token operator">:</span> <span class="token string">'姓名'</span><span class="token punctuation">,</span> key<span class="token operator">:</span> <span class="token string">'name'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token operator">:</span> <span class="token string">'性别'</span><span class="token punctuation">,</span> key<span class="token operator">:</span> <span class="token string">'sex'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token operator">:</span> <span class="token string">'年龄'</span><span class="token punctuation">,</span> key<span class="token operator">:</span> <span class="token string">'age'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token operator">:</span> <span class="token string">'身高'</span><span class="token punctuation">,</span> key<span class="token operator">:</span> <span class="token string">'height'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token comment">// form</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>
+      formData<span class="token punctuation">,</span>
+      formConfig<span class="token punctuation">,</span>
+      submitHandle<span class="token punctuation">,</span>
+      resetHandle<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useForm</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      formRef<span class="token punctuation">,</span>
+      formData<span class="token operator">:</span> <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> sex<span class="token operator">:</span> <span class="token keyword">undefined</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      formConfig<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">'input'</span><span class="token punctuation">,</span> key<span class="token operator">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span> label<span class="token operator">:</span> <span class="token string">'姓名'</span><span class="token punctuation">,</span> span<span class="token operator">:</span> <span class="token number">6</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">'input'</span><span class="token punctuation">,</span> key<span class="token operator">:</span> <span class="token string">'sex'</span><span class="token punctuation">,</span> label<span class="token operator">:</span> <span class="token string">'性别'</span><span class="token punctuation">,</span> span<span class="token operator">:</span> <span class="token number">6</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// table &amp; page</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>
+      loading<span class="token punctuation">,</span>
+      dataSource<span class="token punctuation">,</span>
+      pagination<span class="token punctuation">,</span>
+      searchHandle<span class="token punctuation">,</span>
+      resetHandle<span class="token operator">:</span> resetTableHandle
+    <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useTable</span><span class="token punctuation">(</span>getSearchList<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// 查询</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">searchFormHandle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">submitHandle</span><span class="token punctuation">(</span>searchHandle<span class="token punctuation">)</span>
+    <span class="token comment">// 重置</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">resetFormHandle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">resetHandle</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token function">resetTableHandle</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      formRef<span class="token punctuation">,</span>
+      formData<span class="token punctuation">,</span>
+      formConfig<span class="token punctuation">,</span>
+      searchFormHandle<span class="token punctuation">,</span>
+      resetFormHandle<span class="token punctuation">,</span>
+      loading<span class="token punctuation">,</span>
+      dataSource<span class="token punctuation">,</span>
+      pagination<span class="token punctuation">,</span>
+      columns
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><p>尽管场景简单，但这也足以让组合式API优势尽显</p> <h2 id="高内聚、低耦合"><a href="#高内聚、低耦合" class="header-anchor">#</a> 高内聚、低耦合</h2> <p>高内聚、低耦合是个经久不衰的话题，低耦合就是拆分的过程，高内聚就是组装的过程，一辆可以跑起来的车是由无数个零件组装起来的，如果可以把组装和拆分做好，项目的可维护度、可读性就变得非常的高，各大框架核心依然是组件化、模块化，当开发者做的足够好时<code>tslint</code>、<code>eslint</code>等辅助性工具也只是锦上添花而已，不知道你是否见到过2000行的ts代码？组件化、模块化是种思想，这种思想深入人心的同时，是否可以将这种思想落地的更好</p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>封装是门艺术</p></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#前言" title="前言">前言</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#ui层" title="UI层">UI层</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#基础组件" title="基础组件">基础组件</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#业务组件" title="业务组件">业务组件</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#hooks-逻辑层" title="hooks-逻辑层">hooks-逻辑层</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#mixin的问题" title="mixin的问题">mixin的问题</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#usetbale" title="useTbale">useTbale</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#useform" title="useForm">useForm</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#使用" title="使用">使用</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#高内聚、低耦合" title="高内聚、低耦合">高内聚、低耦合</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#总结" title="总结">总结</a></div></div></div></div> <footer class="footer" data-v-3d9deeb8><div class="footer-left-wrap" data-v-3d9deeb8><ul class="contact" data-v-3d9deeb8><li class="contact-item" data-v-3d9deeb8><a href="https://github.com/xwei111/chJouBlog" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-3d9deeb8><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-3d9deeb8><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-3d9deeb8></path></svg>
+          
+        </a></li><li class="contact-item" data-v-3d9deeb8><a href="mailto:17681828640@163.com" class="nav-link external" data-v-3d9deeb8><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail" data-v-3d9deeb8><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" data-v-3d9deeb8></path><polyline points="22,6 12,13 2,6" data-v-3d9deeb8></polyline></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-3d9deeb8><ul class="copyright" data-v-3d9deeb8><li class="copyright-item" data-v-3d9deeb8>追旅 © 2020</li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/chJouBlog/assets/js/app.df98fc69.js" defer></script><script src="/chJouBlog/assets/js/14.37cc0a42.js" defer></script><script src="/chJouBlog/assets/js/3.4ccbfffa.js" defer></script><script src="/chJouBlog/assets/js/59.552f2d03.js" defer></script>
+  </body>
+</html>
