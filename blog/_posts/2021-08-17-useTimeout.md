@@ -36,6 +36,7 @@ perTimeout(() => console.log('test'), 1000)
 | 参数        | 说明         | 类型        | 可选值        | 默认值  |
 |-------------|--------------|-------------|--------------|---------|
 | perTimeout | 优化后setTimeout | Function(callback, time) | - | - |
+| timer      | 存储定时器临时变量 | - | - | null |
 
 ### PerTimeout  Params
 
