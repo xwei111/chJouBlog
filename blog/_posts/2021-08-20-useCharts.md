@@ -84,7 +84,7 @@ const { doResult, loading } = useAsync({
   init: false,
   successCallBack: ({ code, data }) => {
     code === '0' && setDataSource(data)
-    code === '0' && perTimeout(chartInit())
+    code === '0' && perTimeout(chartInit)
   }
 })
 // 需要获取dom，所以在onMounted调用接口
