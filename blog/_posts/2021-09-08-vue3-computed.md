@@ -11,6 +11,10 @@ location: 杭州滨江
 
 今天分享```computed```，```computed```和```effect```、```ref```、```reactive```息息相关，不了解这些的话翻一下之前的分享
 
+[简化代码](https://github.com/xwei111/customVue3)
+
+[vue3-computed源码位置](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/computed.ts)
+
 ## computed
 
 根据官网的解释，```computed```接受一个 getter 函数或者，接受一个具有 get 和 set 函数的对象，看一下源码中的设计
