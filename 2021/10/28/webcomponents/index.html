@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>web components | 追旅</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="
+
+10月份忙了一段业务，将自己理解的一些开发思想落地的业务中，也有了不少的收获。身为一个技术，自是有着一步跟不上步步跟不上的觉悟，so，马 ...">
+    
+    <link rel="preload" href="/chJouBlog/assets/css/0.styles.7f9b6dec.css" as="style"><link rel="preload" href="/chJouBlog/assets/js/app.41336437.js" as="script"><link rel="preload" href="/chJouBlog/assets/js/14.507d3beb.js" as="script"><link rel="preload" href="/chJouBlog/assets/js/3.157d337a.js" as="script"><link rel="preload" href="/chJouBlog/assets/js/77.c3a62d22.js" as="script"><link rel="prefetch" href="/chJouBlog/assets/js/10.a12ec072.js"><link rel="prefetch" href="/chJouBlog/assets/js/11.c1c27d0c.js"><link rel="prefetch" href="/chJouBlog/assets/js/12.c3f34727.js"><link rel="prefetch" href="/chJouBlog/assets/js/13.891d4121.js"><link rel="prefetch" href="/chJouBlog/assets/js/15.c4097264.js"><link rel="prefetch" href="/chJouBlog/assets/js/16.a89c6a2a.js"><link rel="prefetch" href="/chJouBlog/assets/js/17.9730b65b.js"><link rel="prefetch" href="/chJouBlog/assets/js/18.655215ed.js"><link rel="prefetch" href="/chJouBlog/assets/js/19.6d4e65b2.js"><link rel="prefetch" href="/chJouBlog/assets/js/20.097c6a3d.js"><link rel="prefetch" href="/chJouBlog/assets/js/21.f4580eb5.js"><link rel="prefetch" href="/chJouBlog/assets/js/22.abdccfef.js"><link rel="prefetch" href="/chJouBlog/assets/js/23.922f7070.js"><link rel="prefetch" href="/chJouBlog/assets/js/24.09373cb1.js"><link rel="prefetch" href="/chJouBlog/assets/js/25.8a2a1926.js"><link rel="prefetch" href="/chJouBlog/assets/js/26.8253142c.js"><link rel="prefetch" href="/chJouBlog/assets/js/27.8933916c.js"><link rel="prefetch" href="/chJouBlog/assets/js/28.0abb8859.js"><link rel="prefetch" href="/chJouBlog/assets/js/29.5161da6f.js"><link rel="prefetch" href="/chJouBlog/assets/js/30.b00e3a3f.js"><link rel="prefetch" href="/chJouBlog/assets/js/31.7d13ad25.js"><link rel="prefetch" href="/chJouBlog/assets/js/32.86e9de7e.js"><link rel="prefetch" href="/chJouBlog/assets/js/33.94077063.js"><link rel="prefetch" href="/chJouBlog/assets/js/34.8a8eb1a2.js"><link rel="prefetch" href="/chJouBlog/assets/js/35.f8019788.js"><link rel="prefetch" href="/chJouBlog/assets/js/36.694b0b4d.js"><link rel="prefetch" href="/chJouBlog/assets/js/37.9bbe2089.js"><link rel="prefetch" href="/chJouBlog/assets/js/38.ef5eec18.js"><link rel="prefetch" href="/chJouBlog/assets/js/39.f59ff945.js"><link rel="prefetch" href="/chJouBlog/assets/js/4.f4a7a9f5.js"><link rel="prefetch" href="/chJouBlog/assets/js/40.0c13f08b.js"><link rel="prefetch" href="/chJouBlog/assets/js/41.efcb6307.js"><link rel="prefetch" href="/chJouBlog/assets/js/42.7122cf14.js"><link rel="prefetch" href="/chJouBlog/assets/js/43.e9c8c9d5.js"><link rel="prefetch" href="/chJouBlog/assets/js/44.a42c2680.js"><link rel="prefetch" href="/chJouBlog/assets/js/45.21b4135e.js"><link rel="prefetch" href="/chJouBlog/assets/js/46.448f85fc.js"><link rel="prefetch" href="/chJouBlog/assets/js/47.0d56719e.js"><link rel="prefetch" href="/chJouBlog/assets/js/48.017429d1.js"><link rel="prefetch" href="/chJouBlog/assets/js/49.46de436d.js"><link rel="prefetch" href="/chJouBlog/assets/js/5.d0bf1253.js"><link rel="prefetch" href="/chJouBlog/assets/js/50.42dd1264.js"><link rel="prefetch" href="/chJouBlog/assets/js/51.93ff9450.js"><link rel="prefetch" href="/chJouBlog/assets/js/52.0b173b07.js"><link rel="prefetch" href="/chJouBlog/assets/js/53.f5e57022.js"><link rel="prefetch" href="/chJouBlog/assets/js/54.c3f5d224.js"><link rel="prefetch" href="/chJouBlog/assets/js/55.c17ba25a.js"><link rel="prefetch" href="/chJouBlog/assets/js/56.1797123f.js"><link rel="prefetch" href="/chJouBlog/assets/js/57.85c05ef3.js"><link rel="prefetch" href="/chJouBlog/assets/js/58.54dcf16c.js"><link rel="prefetch" href="/chJouBlog/assets/js/59.4f2d0d31.js"><link rel="prefetch" href="/chJouBlog/assets/js/6.bccd98a5.js"><link rel="prefetch" href="/chJouBlog/assets/js/60.c6f13dde.js"><link rel="prefetch" href="/chJouBlog/assets/js/61.da6c0587.js"><link rel="prefetch" href="/chJouBlog/assets/js/62.96aae9ee.js"><link rel="prefetch" href="/chJouBlog/assets/js/63.aa0dd546.js"><link rel="prefetch" href="/chJouBlog/assets/js/64.df854dfb.js"><link rel="prefetch" href="/chJouBlog/assets/js/65.d6df5feb.js"><link rel="prefetch" href="/chJouBlog/assets/js/66.bd51b48c.js"><link rel="prefetch" href="/chJouBlog/assets/js/67.d98a0f86.js"><link rel="prefetch" href="/chJouBlog/assets/js/68.0d63cc9e.js"><link rel="prefetch" href="/chJouBlog/assets/js/69.ba4524d7.js"><link rel="prefetch" href="/chJouBlog/assets/js/7.83664ee5.js"><link rel="prefetch" href="/chJouBlog/assets/js/70.1ad6eba7.js"><link rel="prefetch" href="/chJouBlog/assets/js/71.41c8b7c8.js"><link rel="prefetch" href="/chJouBlog/assets/js/72.9d3d306a.js"><link rel="prefetch" href="/chJouBlog/assets/js/73.372fc141.js"><link rel="prefetch" href="/chJouBlog/assets/js/74.d8a48bcd.js"><link rel="prefetch" href="/chJouBlog/assets/js/75.eeff0581.js"><link rel="prefetch" href="/chJouBlog/assets/js/76.465bafea.js"><link rel="prefetch" href="/chJouBlog/assets/js/78.95c2e950.js"><link rel="prefetch" href="/chJouBlog/assets/js/8.aa6c7046.js"><link rel="prefetch" href="/chJouBlog/assets/js/9.7a9e1901.js"><link rel="prefetch" href="/chJouBlog/assets/js/vuejs-paginate.af7ed43d.js">
+    <link rel="stylesheet" href="/chJouBlog/assets/css/0.styles.7f9b6dec.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/chJouBlog/" class="nav-link home-link">追旅 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/chJouBlog/" class="nav-link">Blog</a></li><li class="nav-item"><a href="/chJouBlog/tag/" class="nav-link">Tags</a></li><li class="nav-item"><a href="/chJouBlog/author.html" class="nav-link">Author</a></li><li class="nav-item"><a href="/chJouBlog/log.html" class="nav-link">Log</a></li><li class="nav-item"><a href="https://github.com/xwei111/chJouBlog" target="_blank" rel="noopener noreferrer" class="nav-link external">GitHub</a></li><li class="nav-item"><a href="https://xwei111.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">XW-UI</a></li><li class="nav-item"><a href="https://ludd.link" target="_blank" rel="noopener noreferrer" class="nav-link external">Ludd</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/chJouBlog/" class="nav-link mobile-home-link">追旅 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/chJouBlog/" class="nav-link">Blog</a></li><li class="mobile-nav-item"><a href="/chJouBlog/tag/" class="nav-link">Tags</a></li><li class="mobile-nav-item"><a href="/chJouBlog/author.html" class="nav-link">Author</a></li><li class="mobile-nav-item"><a href="/chJouBlog/log.html" class="nav-link">Log</a></li><li class="mobile-nav-item"><a href="https://github.com/xwei111/chJouBlog" target="_blank" rel="noopener noreferrer" class="nav-link external">GitHub</a></li><li class="mobile-nav-item"><a href="https://xwei111.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">XW-UI</a></li><li class="mobile-nav-item"><a href="https://ludd.link" target="_blank" rel="noopener noreferrer" class="nav-link external">Ludd</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        web components
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">追旅</span> <span itemprop="address">   in 杭州滨江</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2021-10-28T00:00:00.000Z">
+      Thu Oct 28 2021
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/chJouBlog/tag/web components" data-v-42ccfcd5><span data-v-42ccfcd5>web components</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>10月份忙了一段业务，将自己理解的一些开发思想落地的业务中，也有了不少的收获。身为一个技术，自是有着一步跟不上步步跟不上的觉悟，so，马不停蹄的去了解了<code>web components</code>一下，说实话用下来感觉不是很顺手，主要还是诸多<code>api</code>不了</p> <h2 id="由来"><a href="#由来" class="header-anchor">#</a> 由来</h2> <p>三大框架<code>vue</code>、<code>react</code>、<code>angular</code>并驾齐驱，但是有个问题就是组件之间不通用，很多优秀的<code>ui</code>库会做三个版本让开发者使用，解决了一些问题，但这样的做法无疑是对资源的浪费，而且维护成本高，需要对各个版本库单独维护，为了解决这样的问题，<code>web components</code>应运而生，让组件的变得更加通用，一次开发即可多处使用</p> <h2 id="核心概念"><a href="#核心概念" class="header-anchor">#</a> 核心概念</h2> <p>如果你使用过<code>vue</code>的模板语法，你会发现<code>web components</code>处处都有<code>vue</code>的影子，其实<code>vue</code>也有一部分是参考了<code>web components</code>，介绍几个重点概念：</p> <ul><li>Custom elements</li></ul> <p>即：自定义元素，<code>web components</code>允许我们自定义组件，就像是<code>vue</code>一样，写一个组件然后使用，如：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">XwButton</span> <span class="token keyword">extends</span> <span class="token class-name">HTMLElement</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+window<span class="token punctuation">.</span>customElements<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">'xw-button'</span><span class="token punctuation">,</span> XwButton<span class="token punctuation">)</span>
+</code></pre></div><p>定义完成后就可以在<code>html</code>中使用：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>xw-button</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>xw-button</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ul><li>Shadow DOM</li></ul> <p>可以将组件与其他文档分离开来，作为独立的一部分，保持私有性，无需担心<code>js</code>和<code>css</code>与其他部分冲突</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">this</span><span class="token punctuation">.</span>_shadowRoot <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">attachShadow</span><span class="token punctuation">(</span><span class="token punctuation">{</span> mode<span class="token operator">:</span> <span class="token string">'closed'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>HTML templates</li></ul> <p><code>web components</code>提供了<code>&lt;template&gt;</code>、<code>&lt;slot&gt;</code>两个标签，这两个标签只是标记模板，而<code>slot</code>功能类似<code>vue</code>中的插槽</p> <p>其实还有很多<code>api</code>，参考<a href="https://developer.mozilla.org/zh-CN/docs/Web/Web_Components" target="_blank" rel="noopener noreferrer">web components<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>接下来用来一个<code>demo</code>来看一下<code>web components</code>是如何完成一个组件的</p> <h2 id="button"><a href="#button" class="header-anchor">#</a> Button</h2> <p><a href="http://chasejourney.top/web-components/" target="_blank" rel="noopener noreferrer">demo<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><code>button</code>组件写的比较简单，代码也有相应的注释，如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> buttonTemplate <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'template'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 内容模板</span>
+buttonTemplate<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  &lt;style&gt;
+    :host {
+      display: inline-block; 
+      padding: 5px 15px;
+      box-sizing:border-box; 
+      border:1px solid var(--borderColor, #ccc); 
+      font-size: 14px; 
+      color: var(--fontColor,#333);  
+      border-radius: var(--borderRadius,.25em); 
+      cursor: pointer;
+    }
+    :host([type=&quot;primary&quot;]) {
+      background: #409EFF;
+      border-color: #409EFF;
+      color: #fff;
+    }
+    :host([type=&quot;success&quot;]) {
+      background: #67C23A;
+      border-color: #67C23A;
+      color: #fff;
+    }
+    :host([type=&quot;warning&quot;]) {
+      background: #E6A23C;
+      border-color: #E6A23C;
+      color: #fff;
+    }
+    :host([type=&quot;error&quot;]) {
+      background: #F56C6C;
+      border-color: #F56C6C;
+      color: #fff;
+    }
+    :host([disabled]) {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+    :host([text]) {
+      padding: 0;
+      border: none;
+      background: none;
+    }
+    :host([text][type=&quot;primary&quot;]) {
+      padding: 0;
+      border: none;
+      background: none;
+      color: #409EFF;
+    }
+    :host([text][type=&quot;success&quot;]) {
+      padding: 0;
+      border: none;
+      background: none;
+      color: #67C23A;
+    }
+    :host([text][type=&quot;warning&quot;]) {
+      padding: 0;
+      border: none;
+      background: none;
+      color: #E6A23C;
+    }
+    :host([text][type=&quot;error&quot;]) {
+      padding: 0;
+      border: none;
+      background: none;
+      color: #F56C6C;
+    }
+    .xw-button {
+      background:none; 
+      outline:0; 
+      border:0; 
+      width:100%;
+      height:100%;
+      padding:0;
+      user-select: none;
+      cursor: unset;
+    }
+  &lt;/style&gt;
+  &lt;div
+    class=&quot;xw-button&quot;
+  &gt;
+    &lt;slot&gt;&lt;/slot&gt;
+  &lt;/div&gt;
+</span><span class="token template-punctuation string">`</span></span>
+
+<span class="token keyword">class</span> <span class="token class-name">XwButton</span> <span class="token keyword">extends</span> <span class="token class-name">HTMLElement</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">// 创建影子DOM（与主文档DOM分开呈现）</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>_shadowRoot <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">attachShadow</span><span class="token punctuation">(</span><span class="token punctuation">{</span> mode<span class="token operator">:</span> <span class="token string">'open'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 添加元素</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>_shadowRoot<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>buttonTemplate<span class="token punctuation">.</span>content<span class="token punctuation">.</span><span class="token function">cloneNode</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 自定义元素</span>
+window<span class="token punctuation">.</span>customElements<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">'xw-button'</span><span class="token punctuation">,</span> XwButton<span class="token punctuation">)</span>
+
+</code></pre></div><p><code>class</code>部分很好理解，<code>css</code>部分有一个点要解释一下就是<code>:host</code>可以理解为代表整个<code>shadow Dom</code>容器，全局不可以在使用通配符重写<code>marging</code>和<code>padding</code>样式，否则会影响<code>shadow Dom</code>容器内部样式</p> <p>这里简单的写了个<code>button</code>，但说实话样式部分写起来蛮累的</p> <h2 id="input"><a href="#input" class="header-anchor">#</a> Input</h2> <p>如下：</p> <p><a href="http://chasejourney.top/web-components/" target="_blank" rel="noopener noreferrer">demo<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><code>input</code>组件加了自定义事件和状态</p> <ul><li>自定义事件</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">this</span><span class="token punctuation">.</span>$input<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">,</span> <span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  e<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> target<span class="token operator">:</span> <span class="token punctuation">{</span> value <span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">=</span> e
+  <span class="token comment">// dispatchEvent用来分发事件， CustomEvent自定义时间，可以携带一个参数</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">dispatchEvent</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">CustomEvent</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> detail<span class="token operator">:</span> <span class="token punctuation">{</span> value <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>监听了<code>input</code>时间，并且抛出一个新的<code>input</code>事件，且将<code>vue</code>值传出去，在<code>html</code>中使用如下：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- html --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>xw-input</span> <span class="token attr-name">oninput</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>onInput(event)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>xw-input</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- js --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">const</span> <span class="token function-variable function">onInput</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><code>vue</code>中使用如下:</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>xw-input</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>webInput<span class="token punctuation">&quot;</span></span> <span class="token attr-name">defaultValue</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>123<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>xw-input</span><span class="token punctuation">&gt;</span></span>
+    {{ value }}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      value<span class="token operator">:</span> <span class="token string">'123'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'webInput'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">,</span> <span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> target<span class="token operator">:</span> <span class="token punctuation">{</span> value <span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">=</span> e
+      <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> value
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="其他常用方法"><a href="#其他常用方法" class="header-anchor">#</a> 其他常用方法</h2> <ul><li>observedAttributes、attributeChangedCallback</li></ul> <p><code>observedAttributes</code>返回一个数组，当数组中数据发生变化时在<code>attributeChangedCallback</code>中会监听到数据的变化、</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">XwInput</span> <span class="token keyword">extends</span> <span class="token class-name">HTMLElement</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">get</span> <span class="token function">value</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$input<span class="token punctuation">.</span>value
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">set</span> <span class="token function">value</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$input<span class="token punctuation">.</span>value <span class="token operator">=</span> value
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">static</span> <span class="token keyword">get</span> <span class="token function">observedAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 监听value属性的变化</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'value'</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">attributeChangedCallback</span><span class="token punctuation">(</span><span class="token parameter">key<span class="token punctuation">,</span> oldVal<span class="token punctuation">,</span> newVal</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// value变化触发事件</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> oldVal<span class="token punctuation">,</span> newVal<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>connectedCallback</li></ul> <p>自定义元素初次连接到<code>DOM</code>时触发</p> <h2 id="优劣"><a href="#优劣" class="header-anchor">#</a> 优劣</h2> <ul><li>优势</li></ul> <ol><li>原生，无需额外插件</li> <li>无需编译</li> <li>标准的css/js/html</li> <li>跨平台、跨框架</li> <li>维护成本低</li></ol> <ul><li>劣势</li></ul> <ol><li>有兼容性，现在浏览器已支持</li> <li>有学习成本，原生基础要扎实</li></ol> <h2 id="结语"><a href="#结语" class="header-anchor">#</a> 结语</h2> <p>目前只是简单的做了尝试，了解了一些<code>api</code>，还是需要在业务开发中操刀一些（已经可以在生产在使用）</p></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#前言" title="前言">前言</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#由来" title="由来">由来</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#核心概念" title="核心概念">核心概念</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#button" title="Button">Button</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#input" title="Input">Input</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#其他常用方法" title="其他常用方法">其他常用方法</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#优劣" title="优劣">优劣</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#结语" title="结语">结语</a></div></div></div></div> <footer class="footer" data-v-3d9deeb8><div class="footer-left-wrap" data-v-3d9deeb8><ul class="contact" data-v-3d9deeb8><li class="contact-item" data-v-3d9deeb8><a href="https://github.com/xwei111/chJouBlog" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-3d9deeb8><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-3d9deeb8><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-3d9deeb8></path></svg>
+          
+        </a></li><li class="contact-item" data-v-3d9deeb8><a href="mailto:17681828640@163.com" class="nav-link external" data-v-3d9deeb8><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail" data-v-3d9deeb8><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" data-v-3d9deeb8></path><polyline points="22,6 12,13 2,6" data-v-3d9deeb8></polyline></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-3d9deeb8><ul class="copyright" data-v-3d9deeb8><li class="copyright-item" data-v-3d9deeb8>追旅 © 2020</li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/chJouBlog/assets/js/app.41336437.js" defer></script><script src="/chJouBlog/assets/js/14.507d3beb.js" defer></script><script src="/chJouBlog/assets/js/3.157d337a.js" defer></script><script src="/chJouBlog/assets/js/77.c3a62d22.js" defer></script>
+  </body>
+</html>
