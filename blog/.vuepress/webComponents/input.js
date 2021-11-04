@@ -1,4 +1,4 @@
-const inputTemplate = document.createElement('template')
+const inputTemplate = window.document.createElement('template')
 
 inputTemplate.innerHTML = `
   <style>

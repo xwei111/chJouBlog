@@ -1,4 +1,4 @@
-const buttonTemplate = document.createElement('template');
+const buttonTemplate = window.document.createElement('template');
 
 buttonTemplate.innerHTML = `
   <style>
