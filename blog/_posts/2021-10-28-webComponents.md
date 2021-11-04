@@ -52,25 +52,7 @@ this._shadowRoot = this.attachShadow({ mode: 'closed' })
 
 ## Button
 
-如下(博客是```vuepress```搭建的，所以看到的内容即在```vue```里的表现)：
-
-<xw-button onclick="testHandle()">default</xw-button>
-<xw-button type="primary">primary</xw-button>
-<xw-button type="success">success</xw-button>
-<xw-button type="warning">warning</xw-button>
-<xw-button type="error">error</xw-button>
-<div style="margin: 10px;"></div>
-<xw-button disabled>default</xw-button>
-<xw-button type="primary" disabled>primary</xw-button>
-<xw-button type="success" disabled>success</xw-button>
-<xw-button type="warning" disabled>warning</xw-button>
-<xw-button type="error" disabled>error</xw-button>
-<div style="margin: 10px;"></div>
-<xw-button text>default</xw-button>
-<xw-button text type="primary">primary</xw-button>
-<xw-button text type="success">success</xw-button>
-<xw-button text type="warning">warning</xw-button>
-<xw-button text type="error">error</xw-button>
+[demo](http://chasejourney.top/web-components/)
 
 ```button```组件写的比较简单，代码也有相应的注释，如下：
 
@@ -182,7 +164,7 @@ window.customElements.define('xw-button', XwButton)
 
 如下：
 
-<webComponents-input />
+[demo](http://chasejourney.top/web-components/)
 
 ```input```组件加了自定义事件和状态
 
