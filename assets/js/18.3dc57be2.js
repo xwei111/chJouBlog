@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[18],{589:function(t,n,e){},673:function(t,n,e){"use strict";e(589)},694:function(t,n,e){"use strict";e.r(n);var s={},c=(e(673),e(19)),i=Object(c.a)(s,(function(){var t=this.$createElement,n=this._self._c||t;return n("div",{staticClass:"auth_content"},[n("Content")],1)}),[],!1,null,"75df1f88",null);n.default=i.exports}}]);
