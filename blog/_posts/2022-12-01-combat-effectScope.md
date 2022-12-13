@@ -150,8 +150,6 @@ const click = async (row) => {
 const { dataSource } = useTab({ id, init: true })
 ```
 
-至此，代码演示结束
-
 ### 优化改进
 
 若是到```tab```页的入口较多的话，例如有5个A页面，一个一个添加过于麻烦，我们将数据更新统一放在```tab```页面，优化后```tab```也代码如下
